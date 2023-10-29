@@ -98,7 +98,10 @@ img {
     } 
   }
   
-  
+  .original-price {
+    text-decoration: line-through;
+    color: #999; /* You can adjust the color to your preference */
+  }
   
 
 /* Intro */
@@ -225,6 +228,7 @@ background-blend-mode: overlay;
   text-align: center;
   padding-bottom: 16px;
   transition: all 500ms ease-in-out;
+  background-color: white;
 }
 
 .ac:hover {
