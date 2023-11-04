@@ -1,0 +1,27 @@
+Welcome to our Restaurant Management System project! Our project leverages cutting-edge technologies, including Spring Boot 3, Spring Security 6, Angular 16, Ng Zorro UI, and a MySQL database. Let's explore the key features of this restaurant management system:
+
+Project Features:
+
+Angular Modules:
+
+Our project is structured into two Angular modules: Admin and Customer, each with its own routing files to provide a seamless user experience.
+
+Admin Functions:
+
+- Secure Authentication: Admin can log in to generate tokens and access authenticated APIs. We've implemented JWT authentication and authorization to ensure robust API protection.
+- Category Management: Admin can effortlessly post, get, and search for categories, making menu management a breeze.
+- Product Management: Admin have full control over products, with the ability to post, update, delete, get, and search for items on the menu.
+- Reservation Requests: Admin can view reservation requests from customers and take action, such as approving or disapproving requests, to efficiently manage table bookings.
+
+
+Customer Functions:
+
+- Secure Authentication: Customers can log in to generate tokens and access authenticated APIs, just like admin. JWT authentication and authorization are in place to safeguard data and functionality.
+- Product Browsing: Customers can explore all the products available on the menu directly from their dashboard.
+- Product Search: Easily find specific products with a convenient search feature.
+- Reservation Requests: Customers can initiate reservation requests to secure a dining table for a specific date and time.
+- Past Reservation Requests: Customers can also access their history of reservation requests for reference.
+
+
+Ng Zorro UI:
+We've integrated the Ng Zorro UI library to ensure an attractive and user-friendly interface, enhancing the overall experience for both admin and customers.
