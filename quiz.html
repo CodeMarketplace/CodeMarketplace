@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application or Online Examination Portal - CodeMarketPlace</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K886V3QVRY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-K886V3QVRY');
+    </script>
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        } */
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* HEADER */
+        .logob {
+            /* width: 100px; */
+            height: 90px;
+            cursor: pointer;
+        }
+
+        nav {
+            width: 84%;
+            margin: auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #606163;
+        }
+
+        nav ul li a:hover {
+            color: #ff4321;
+        }
+
+        .d {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .align-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav {
+                padding: 16px 0;
+            }
+
+
+            .icons {
+                display: none;
+            }
+
+
+            .logob {
+                /* width: 100px; */
+                height: 80px;
+                cursor: pointer;
+            }
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .section1 {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .section2 {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-button {
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .slider-container {
+            width: 100%;
+            /* Adjust the width as needed */
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1s;
+        }
+
+        .slider-item {
+            flex: 0 0 16%;
+            /* Each image takes 16% of the container width */
+            padding: 0;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image fills the container */
+        }
+
+
+        .highlight {
+            background-color: #FFFF00;
+            /* Yellow background color for highlighting */
+            font-weight: bold;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: #FFFF00;
+            /* Yellow background color for highlighting */
+            font-weight: bold;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        b, strong{
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="assets/logo.png" class="logob">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+
+        </ul>
+    </nav>
+    <!-- <header>
+        <h1>About Us</h1>
+    </header> -->
+
+    <div class="container">
+        <div class="section1">
+
+            <!-- <h2>Project Details</h2> -->
+
+           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> 
+
+            <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/quiz/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/3.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/4.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/5.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/6.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/7.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/8.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/9.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/10.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/quiz/11.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+
+                    <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+
+                </button> 
+            </div>
+
+
+
+
+        </div>
+        <div class="section2">
+            <h2>Buy on WhatsApp</h2>
+            <p>For inquiries and to buy this project, please don't hesitate to contact us on WhatsApp.</p>
+            <br>
+            <a href="https://wa.me/+923225285230?text=Hi%20I%20want%20to%20buy%20the%quiz%20or%20Examination%20portal%20project"
+             target="_blank" class="contact-button"
+                style="text-decoration: none; margin-top: 20px !important;">Contact Us on WhatsApp</a>
+        </div>
+    </div>
+
+    <div
+        style="background-color: #b5ccf0; border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin: 20px 0; width: 80%; margin: auto;">
+        <p style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">We offer the possibility of
+            transforming this project into microservices architecture. The estimated cost for this conversion is $50.
+        </p>
+    </div>
+
+    <main>
+        <h1>Welcome to our Full Stack Quiz Application or Online Examination Portal!</h1>
+
+    <h2>Project Introduction</h2>
+    <p>This project is aimed at creating a quiz system with two distinct roles: Admin and User. The admin will have control over the test creation, question management, and test results tracking, while users will be able to sign up, log in, take tests, and receive their results. We’ll ensure that the application is secure and scalable, and we’ll implement features like real-time test monitoring and automatic submission when the time runs out during a test.</p>
+
+    <h2>Features of the Quiz Application</h2>
+
+    <h3>Admin Features</h3>
+    <ul>
+        <li><strong>Automatic Admin Account Creation:</strong>
+            <p>As soon as the application starts, an admin account is automatically created in the backend. This admin will have the default credentials (email: admin@gmail.com, password: admin), which can be used to log in through the admin login page.</p>
+        </li>
+        <li><strong>Test and Question Management:</strong>
+            <p>The admin can create multiple tests. For each test, the admin can add questions with four possible options and one correct answer. Questions can cover various topics.</p>
+        </li>
+        <li><strong>View Test Results:</strong>
+            <p>Admins can access and review the test results of all users. They can see how many questions were answered correctly and the overall score percentage for each user.</p>
+        </li>
+    </ul>
+
+    <h3>User Features</h3>
+    <ul>
+        <li><strong>User Signup and Login:</strong>
+            <p>Users can create an account using the signup page, providing their email, name, and password. Once registered, they can use the same login page to access the application and participate in available tests.</p>
+        </li>
+        <li><strong>Taking Tests:</strong>
+            <p>Users will have access to a list of available tests on the dashboard. They can select any test, answer the questions, and submit their answers.</p>
+        </li>
+        <li><strong>Real-Time Test Monitoring and Automatic Submission:</strong>
+            <p>While taking a test, the remaining time will be displayed, ensuring users are aware of how much time they have left. If the user runs out of time, their answers will automatically be submitted, ensuring they don’t lose the progress they’ve made during the test.</p>
+        </li>
+        <li><strong>View Test Results:</strong>
+            <p>After completing a test, users can view their results, including the number of correct answers, total questions, and their overall score percentage.</p>
+        </li>
+    </ul>
+
+
+    </main>
+
+
+
+
+    <!-----footer-------------------->
+    <section id="footer">
+
+        <div class="foot">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about-us.html">ABOUT US</a></li>
+                <!-- <li><a href="">CONTACT US</a></li> -->
+
+            </ul>
+
+
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
